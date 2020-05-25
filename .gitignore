@@ -8,5 +8,5 @@ ast_boiler_core.*
 src
 dist
 .env
-__pycache__/
+__pycache__
 
