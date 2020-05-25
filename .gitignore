@@ -1,0 +1,12 @@
+# IDE
+.idea
+.vscode
+
+# Common
+venv
+ast_boiler_core.*
+src
+dist
+.env
+__pycache__/
+
