@@ -18,7 +18,12 @@ setup(
     zip_safe=False,
     include_package_data=True,
     packages=find_packages(),
-    install_requires=['flask', 'python-dotenv'],
+    install_requires=[
+        'flask',
+        'python-dotenv',
+        'flask-sqlalchemy',
+        'Flask-MySQLdb'
+    ],
     extras_require={"test": ["pytest", "coverage"]},
     entry_points={
         "console_scripts": [
