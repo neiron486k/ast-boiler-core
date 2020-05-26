@@ -22,12 +22,8 @@ setup(
         'flask',
         'python-dotenv',
         'flask-sqlalchemy',
-        'Flask-MySQLdb'
+        'Flask-MySQLdb',
+        'Flask-Migrate'
     ],
     extras_require={"test": ["pytest", "coverage"]},
-    entry_points={
-        "console_scripts": [
-            "boiler = ast_boiler_core.command:cli",
-        ],
-    }
 )

@@ -1,14 +1,11 @@
-import click
 import os
 import shutil
+from flask.cli import with_appcontext
+import click
 
 
-@click.group()
-def cli():
-    pass
-
-
-@cli.command()
+@click.command()
+@with_appcontext
 def init():
     """Init project structure"""
     filename = 'src/__init__.py'
@@ -24,10 +21,3 @@ def init():
     if not os.path.exists('.env'):
         target = os.path.join(os.path.dirname(__file__), '.env.default')
         shutil.copy(target, '.env')
-
-
-@cli.command()
-def run():
-    """Run web server for development with auto reload"""
-    from src import app
-    app.run()

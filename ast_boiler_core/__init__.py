@@ -1,6 +1,7 @@
 from flask import Flask
 from dotenv import load_dotenv
 from .orm import init_orm
+from .cli import init
 
 load_dotenv()
 
@@ -17,5 +18,8 @@ def create_app(config=None):
 
     # init orm
     init_orm(app)
+
+    # add command
+    app.cli.add_command(init)
 
     return app
