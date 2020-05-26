@@ -12,7 +12,6 @@ def cli():
 def init():
     """Init project structure"""
     filename = 'src/__init__.py'
-
     os.makedirs(os.path.dirname(filename), exist_ok=True)
 
     if not os.path.exists(filename):
@@ -25,3 +24,10 @@ def init():
     if not os.path.exists('.env'):
         target = os.path.join(os.path.dirname(__file__), '.env.default')
         shutil.copy(target, '.env')
+
+
+@cli.command()
+def run():
+    """Run web server for development with auto reload"""
+    from src import app
+    app.run()
