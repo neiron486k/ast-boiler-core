@@ -2,7 +2,6 @@ import pytest
 from ast_boiler_core import create_app
 import tempfile
 import os
-import unittest
 
 
 @pytest.fixture
