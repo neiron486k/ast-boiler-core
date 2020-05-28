@@ -1,11 +1,14 @@
 import os
 import shutil
-from flask.cli import with_appcontext
 import click
 
 
-@click.command()
-@with_appcontext
+@click.group()
+def cli():
+    """group for cli commands of this package"""
+
+
+@cli.command()
 def init():
     """Init project structure"""
     filename = 'src/__init__.py'

@@ -4,7 +4,7 @@
 
 # Common
 venv
-ast_boiler_core.*
+nnt_content.*
 src
 dist
 migrations
