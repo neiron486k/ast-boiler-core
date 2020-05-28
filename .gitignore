@@ -4,7 +4,7 @@
 
 # Common
 venv
-nnt_content.*
+scrawny.*
 src
 dist
 build

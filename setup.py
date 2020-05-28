@@ -6,12 +6,12 @@ with io.open("README.md", "r", encoding="utf8") as f:
     readme = f.read()
 
 setup(
-    name='nnt-content',
-    version="1.0.2",
     author="Alex Astafev",
     author_email="efsneiron@gmail.com",
-    description="content/skeleton for flask",
-    keywords="content, skeleton, flask",
+    name='scrawny',
+    version="1.0.0",
+    description="skeleton for flask",
+    keywords="skeleton, flask",
     long_description=readme,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -33,7 +33,7 @@ setup(
     extras_require={"test": ["pytest", "coverage"]},
     entry_points={
         "console_scripts": [
-            "nnt = nntcontent.cli:cli",
+            "scrawny = scrawny.cli.scrawny:cli",
         ],
     }
 )

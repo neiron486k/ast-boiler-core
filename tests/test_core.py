@@ -1,4 +1,4 @@
-from nntcontent import create_app
+from scrawny import create_app
 
 
 def test_create_app():
