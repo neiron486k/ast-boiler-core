@@ -1,1 +1,0 @@
-from scrawny.cli import cli

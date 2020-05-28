@@ -1,6 +1,7 @@
 from flask import Flask
 from dotenv import load_dotenv
-from .orm import init_orm
+from scrawny.extensions.orm import init_orm
+from .cli import cli
 
 load_dotenv()
 

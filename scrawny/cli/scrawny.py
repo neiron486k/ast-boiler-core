@@ -59,18 +59,16 @@ def init(destination: str, force: bool) -> None:
     echo(yellow('Create .env'))
     dotenv = os.path.join(os.getcwd(), destination, '.env')
     dist_dotenv = os.path.join(source, '.env.def')
-    create_dotenv(dist_dotenv, dotenv)
+    _create_dotenv(dist_dotenv, dotenv)
     echo(yellow('Initialize completed'))
 
 
-def create_dotenv(src: str, dst: str) -> None:
+def _create_dotenv(src: str, dst: str) -> None:
     """
-    Create .evn file with FLASK_APP such as destination folder of project
+    Create .evn file
     :param src: str
     :param dst: str
     :return: None
     """
     if not os.path.isfile(dst):
         shutil.copy(src, dst)
-        with open(dst, 'a') as file:
-            file.write('\nFLASK_APP=' + os.path.basename(os.path.dirname(dst)))
